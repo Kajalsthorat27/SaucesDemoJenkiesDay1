@@ -12,6 +12,16 @@ test(" @Regrasstion End to End Flows", async ()=>{
 
     await page.locator("#login-button").click();
 
+    await page.waitForTimeout(7000);
+
+   await page.locator(".product_sort_container").selectOption({label : 'Price (high to low)'});
+
+    await page.waitForTimeout(3000);
+
+    await page.locator("button[name='add-to-cart-sauce-labs-fleece-jacket']").click();
+
+    await page.waitForTimeout(3000);
+
 
 
 
